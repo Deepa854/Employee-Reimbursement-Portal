@@ -1,0 +1,16 @@
+<h1>Edit Company</h1>
+
+<%= simple_form_for @company do |f| %>
+  <div class="form-group">
+    <%= f.input :name, input_html: { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <%= f.input :employee_count, input_html: { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <%= f.input :reimbursement_total, input_html: { class: 'form-control' } %>
+  </div>
+  <%= f.submit 'Update Company', class: 'btn btn-primary my-4' %>
+<% end %>
+
+<%= link_to 'Back to List', companies_path, class: 'btn btn-secondary my-4' %>

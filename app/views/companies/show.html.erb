@@ -1,0 +1,17 @@
+<h1><%= @company.name %></h1>
+
+<p>
+  <strong>Employee Count:</strong>
+  <%= @company.employee_count %>
+</p>
+
+<p>
+  <strong>Reimbursement Total:</strong>
+  <%= number_to_currency(@company.reimbursement_total) %>
+</p>
+
+<%= link_to 'View Employees', company_employees_path(@company), class: 'btn btn-primary' %>
+<%= link_to 'Edit', edit_company_path(@company), class: 'btn btn-warning' %>
+<%= link_to 'Back to List', companies_path, class: 'btn btn-secondary' %>
+<%= link_to 'Destroy', company_path(@company), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+

@@ -1,0 +1,9 @@
+<h1>Employee: <%= @employee.name %></h1>
+
+<p>
+  <strong>Position:</strong>
+  <%= @employee.position %>
+</p>
+
+<%= link_to 'Edit', edit_company_employee_path(@company, @employee), class: 'btn btn-warning' %>
+<%= link_to 'Back to List', company_employees_path(@company), class: 'btn btn-secondary' %>

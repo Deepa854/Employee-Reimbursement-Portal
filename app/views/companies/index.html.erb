@@ -1,0 +1,32 @@
+<h1 class="mb-4">Companies</h1>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Employee Count</th>
+        <th scope="col">Reimbursement Total</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @companies.each do |company| %>
+        <tr>
+          <td><%= company.name %></td>
+          <td><%= company.employee_count %></td>
+          <td><%= number_to_currency(company.reimbursement_total) %></td>
+          <td>
+            <%= link_to 'Show', company_path(company), class: 'btn btn-sm btn-primary' %>
+            <%= link_to 'Edit', edit_company_path(company), class: 'btn btn-sm btn-warning' %>
+            <%= link_to 'Destroy', company_path(company), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="mt-4">
+  <%= link_to 'New Company', new_company_path, class: 'btn btn-success' %>
+</div>

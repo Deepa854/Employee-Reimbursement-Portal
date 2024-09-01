@@ -1,0 +1,13 @@
+<%= simple_form_for @company do |f| %>
+    <div class="form-group">
+      <%= f.input :name, input_html: { class: 'form-control' } %>
+    </div>
+    <div class="form-group">
+      <%= f.input :employee_count, input_html: { class: 'form-control' } %>
+    </div>
+    <div class="form-group">
+      <%= f.input :reimbursement_total, input_html: { class: 'form-control' } %>
+    </div>
+    <%= f.submit 'Create Company', class: 'btn btn-primary' %>
+  <% end %>
+  

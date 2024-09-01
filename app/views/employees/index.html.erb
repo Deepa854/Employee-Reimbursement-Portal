@@ -1,0 +1,32 @@
+<h1>Employees of <%= @company.name %></h1>
+
+<%= link_to 'New Employee', new_company_employee_path(@company), class: "btn btn-primary" %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.name %></td>
+        <td><%= employee.position %></td>
+        <td>
+     
+        
+          <%= link_to 'Show', company_employee_path(@company, employee), class: 'btn btn-sm btn-primary' %>
+          <%= link_to 'Edit', edit_company_employee_path(@company, employee),class: 'btn btn-sm btn-warning'  %>
+          <%= link_to 'Reimbursement Claims', company_employee_reimbursement_claims_path(@company, employee), class: 'btn btn-info' %>
+          <%= link_to 'Destroy', company_employee_path(@company, employee), method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-sm btn-danger'  %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Back to Company', company_path(@company), class: "btn btn-secondary" %>
