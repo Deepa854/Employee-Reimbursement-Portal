@@ -1,6 +1,7 @@
 class EmployeesController < ApplicationController
     before_action :set_company
     before_action :set_employee, only: [:show, :edit, :update, :destroy]
+    include ErrorHandling  # Include the concern
   
     def index
       @employees = @company.employees

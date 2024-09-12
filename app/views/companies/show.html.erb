@@ -13,5 +13,5 @@
 <%= link_to 'View Employees', company_employees_path(@company), class: 'btn btn-primary' %>
 <%= link_to 'Edit', edit_company_path(@company), class: 'btn btn-warning' %>
 <%= link_to 'Back to List', companies_path, class: 'btn btn-secondary' %>
-<%= link_to 'Destroy', company_path(@company), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+<%= link_to 'Destroy', company_path(@company), data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
 

@@ -2,6 +2,7 @@ class ReimbursementClaimsController < ApplicationController
     before_action :set_company
     before_action :set_employee
     before_action :set_reimbursement_claim, only: %i[show edit update destroy]
+    include ErrorHandling  # Include the concern
   
     def index
       @reimbursement_claims = @employee.reimbursement_claims

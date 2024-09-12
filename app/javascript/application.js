@@ -2,7 +2,3 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "bootstrap"
-//import "@rails/ujs"
-
-import Rails from "@rails/ujs"; // Explicitly import Rails UJS
-Rails.start(); // Start Rails UJS

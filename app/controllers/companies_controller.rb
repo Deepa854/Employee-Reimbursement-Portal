@@ -1,6 +1,7 @@
 class CompaniesController < ApplicationController
     before_action :authenticate_user!  # Ensure users are authenticated
     before_action :set_company, only: [:show, :edit, :update, :destroy]
+    include ErrorHandling  # Include the concern
 
     # GET /companies
     def index

@@ -65,7 +65,7 @@ gem 'rspec-rails', group: [:development, :test] # For testing
 gem 'bootstrap', '~> 5.3.0' # For styling with Bootstrap
 gem 'simple_form' # For easy form handling with Bootstrap
 gem 'sassc-rails'
-gem 'rails-ujs'
+
 
 
 
